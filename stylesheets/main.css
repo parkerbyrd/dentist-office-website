@@ -43,7 +43,7 @@ table {
 
 /* Page Styles */
 h1, h2, h3, h4, h5, h6, body {
-  font-family: "Helvetica Neue";
+  font-family: "lato" "Helvetica Neue" sans-serif;
   font-weight: 400; }
 
 h1 {
@@ -85,10 +85,6 @@ body, header, section, div, nav {
 body {
   background-color: #87c9cf; }
 
-.main-header {
-  background-image: url("..img/background.png");
-  width: 100%; }
-
 .container {
   width: 1300px;
   margin: 0 auto; }
@@ -113,26 +109,24 @@ body {
   margin-top: 50px;
   margin-right: 150px;
   padding-left: 10px; }
-
-.main-nav li, .main-nav a {
-  display: inline-block;
-  text-decoration: none;
-  list-style: none;
-  vertical-align: top;
-  margin-right: 10px;
-  color: white;
-  font-size: 20px; }
-
-.main-nav li a:hover {
-  border-bottom: 3px solid #87c9cf; }
-
-.main-nav li:last-child {
-  margin-right: 50px; }
+  .main-nav li, .main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: top;
+    margin-right: 10px;
+    color: white;
+    font-size: 20px; }
+  .main-nav li a:hover {
+    border-bottom: 3px solid #87c9cf; }
+  .main-nav li:last-child {
+    margin-right: 50px; }
 
 .main-header {
-  width: 100%;
   min-height: 200px;
-  top: 0; }
+  top: 0;
+  background-image: url("../img/background.png");
+  width: 100%; }
 
 ul {
   list-style: none; }
