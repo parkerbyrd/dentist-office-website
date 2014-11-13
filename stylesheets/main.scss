@@ -2,6 +2,7 @@
 
 $primary-text-color: white;
 $main-bg: url("../img/background.png");
+$teal: #87c9cf;
 
 @mixin image-template($width, $height, $background-color) {
     width: $width;
@@ -88,7 +89,7 @@ body, header, section, div, nav {
 	position: relative;
 }
 body {
-	background-color: #87c9cf;
+	background-color: #fff;
 }
 
 .container {
