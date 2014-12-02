@@ -3,6 +3,7 @@
 $primary-text-color: white;
 $main-bg: url("../img/background.png");
 $teal: #87c9cf;
+$brown: #754a1d;
 
 @mixin image-template($width, $height, $background-color) {
     width: $width;
@@ -89,7 +90,7 @@ body, header, section, div, nav {
 	position: relative;
 }
 body {
-	background-color: #fff;
+	background-color: $brown;
 }
 
 .container {
@@ -118,28 +119,39 @@ body {
   margin-top: 50px;
   margin-right: 150px;
   padding-left: 10px;
-	li, a {	
-	  display: inline-block;
-	  text-decoration: none;
-	  list-style: none;
-	  vertical-align: top;
-	  margin-right: 10px;
-	  color: $primary-text-color;
-	  font-size: 20px;
-	}
-	li a:hover {
-		border-bottom: 3px solid #87c9cf;
-	}
-	li:last-child {
+  li {
+  	display: inline-block;
+  	&:last-child {
   		margin-right: 50px;
 	}
 
+	a {	
+	  
+	  text-decoration: none;
+	  list-style: none;
+	  vertical-align: top;
+	  margin-right: 12px;
+	  color: $primary-text-color;
+	  font-size: 20px;
+	  border-bottom: 0 solid #87c9cf;
+	  transition: all 500ms ease;
+	  position: relative;
+	  bottom: 0;
+	
+	&:hover {
+		border-bottom: 3px solid #87c9cf;
+		position: relative;
+		bottom: 10px;
+	}
+}
+	
+}
 }
 
 .main-header {
 	min-height: 200px;
 	top:0;
-	background-image: $main-bg;
+	background-image: $brown;
 	width:100%;
 }
 	
