@@ -5,14 +5,13 @@ $main-bg: url("../img/background.png");
 $teal: #87c9cf;
 $brown: #754a1d;
 
-@mixin image-template($width, $height, $background-color) {
-    width: $width;
-    height: $height;
+@mixin image-template($background-color) {
+    
     background-color: $background-color;
     float: left;
     margin-left: 150px;
     margin-top: 50px;
-    border-radius: 5px;
+    
 }
 
 /* Page Styles */
@@ -40,41 +39,45 @@ p {
 	font-size: 18px;
 	font-weight: 200;
 	line-height: 28px;
-	font-weight: 200;
+	font-weight: 300;
 }
 .bigpicture h1 {
 	font-size: 60px;
 	line-height: 84px;
 	color: $primary-text-color;
-  text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
+	text-shadow: 1px 1px 1px #000;
+	font-weight: 200;
+  // text-shadow: 0 1px 0 #ccc,
+  //              0 2px 0 #c9c9c9,
+  //              0 3px 0 #bbb,
+  //              0 4px 0 #b9b9b9,
+  //              0 5px 0 #aaa,
+  //              0 6px 1px rgba(0,0,0,.1),
+  //              0 0 5px rgba(0,0,0,.1),
+  //              0 1px 3px rgba(0,0,0,.3),
+  //              0 3px 5px rgba(0,0,0,.2),
+  //              0 5px 10px rgba(0,0,0,.25),
+  //              0 10px 10px rgba(0,0,0,.2),
+  //              0 20px 20px rgba(0,0,0,.15);
 }
 .bigpicture h2 {
 	font-size: 40px;
 	line-height: 54px;
 	color: $primary-text-color;
-  text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
+	text-shadow: 1px 1px 1px #000;
+	font-weight: 300;
+  // text-shadow: 0 1px 0 #ccc,
+  //              0 2px 0 #c9c9c9,
+  //              0 3px 0 #bbb,
+  //              0 4px 0 #b9b9b9,
+  //              0 5px 0 #aaa,
+  //              0 6px 1px rgba(0,0,0,.1),
+  //              0 0 5px rgba(0,0,0,.1),
+  //              0 1px 3px rgba(0,0,0,.3),
+  //              0 3px 5px rgba(0,0,0,.2),
+  //              0 5px 10px rgba(0,0,0,.25),
+  //              0 10px 10px rgba(0,0,0,.2),
+  //              0 20px 20px rgba(0,0,0,.15);
 }
 
 
@@ -82,7 +85,12 @@ p {
 
 
 
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 
 
@@ -90,7 +98,7 @@ body, header, section, div, nav {
 	position: relative;
 }
 body {
-	background-color: $brown;
+	background:linear-gradient(to bottom,  #f0f0f0 0%, #d8d8d8 100%)
 }
 
 .container {
@@ -103,22 +111,18 @@ body {
 }
 
 .logo img {
-	
-	margin-left: 150px;
-	height: 167px;
-	width: 200px;
+	width: 10%;
 	background: #808080;
 	float: left;
 	border-top: 4px solid #87c9cf;
 }
 .main-nav {
   text-align: left;
-  width: 55%;
-  height: 40px;
+  
   float: right;
-  margin-top: 50px;
-  margin-right: 150px;
+  padding-top: 30px;
   padding-left: 10px;
+  // background-color: $brown;
   li {
   	display: inline-block;
   	&:last-child {
@@ -126,7 +130,7 @@ body {
 	}
 
 	a {	
-	  
+	  text-shadow: 1px 1px 1px #000;
 	  text-decoration: none;
 	  list-style: none;
 	  vertical-align: top;
@@ -149,9 +153,9 @@ body {
 }
 
 .main-header {
-	min-height: 200px;
+	overflow: auto;
 	top:0;
-	background-image: $brown;
+	// background-color: $brown;
 	width:100%;
 }
 	
@@ -166,18 +170,27 @@ ul {
 .bigpicture {
 	clear: both;
 	width:100%;
+	height: 100%;
 	min-height: 600px;
 	margin:0 auto;
-	background: url(http://www.clevedent.com/images/dental-office-design1.jpg) no-repeat;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
+	url(http://www.clevedent.com/images/dental-office-design1.jpg) no-repeat fixed,
+	;
+	background-size: cover;
+
+
 	h1 {
-	position: absolute;
-	top: 300px;
-	left: 50px;
+		padding-top: 150px;
+		text-align: center;
+	// position: absolute;
+	// bottom: 100px;
+	// left: 50px;
 	}
 	h2 {
-	position: absolute;
-	top:370px;
-	left: 50px;
+		text-align: center;
+	// position: absolute;
+	// bottom:60px;
+	// left: 50px;
 	}
 }
 
@@ -195,16 +208,26 @@ ul {
 
 
 .image1 img{ 
-	@include image-template(240px, 240px, #909090) 
+	width: 30%;
+    float: left;
+    
 }	
 .image2 img {
-	@include image-template(300px, 240px, #909090);
-	margin-left: 120px;
+	width: 20%;
+    float: left;
+    margin: 50px 6.66666%;
+    vertical-align: bottom;
+
+    
 
 }
 .image3 img {
-	@include image-template(240px, 240px, #909090);
-	margin-left: 120px;
+	
+    float: left;
+    width: 80%;
+    margin: 0 10%;
+    box-shadow:         1px 1px 2px 4px #989898
+
 }
 /* links under image */
 .image-text {
@@ -213,12 +236,12 @@ ul {
 }
 
 .text1 {
-	width: 240px;
+	width: 20%;
 	min-height: 40px;
 	float: left;
-	margin-left: 150px;
+	margin-left: 6.666666%;
 	margin-top:20px;
-	color: $primary-text-color;
+	color: black;
 	text-align: left;
 }
 .text2 {
@@ -227,18 +250,63 @@ ul {
 	float: left;
 	margin-top:20px;
 	margin-left: 120px;
-	color: $primary-text-color;
+	color: black;
 	text-align: left;
 }
 .text3 {
-	width: 240px;
+	width: 80%;
 	min-height: 40px;
 	float: left;
-	margin-left: 120px;
-	margin-top:20px;
-	color: $primary-text-color;
+	line-height: 2.0;
+	margin:20px 10%;
+	color: black;
 	text-align: left;
+	h4 {
+		line-height: 2.0;
+	}
+	a{
+		color: black;
+		&:hover {
+			font-style: italic;
+		}
+		&:visited {
+			color: black;
+		}
+	}
 }
+
+.main-left {
+	width: 55%;
+	float: left;
+	margin: 50px 2.5%;
+}
+
+.main-right {
+	width: 35%;
+	float: left;
+	margin: 50px 2.5%;
+}
+.about-mary {
+	width: 100%;
+	float: left;
+	padding: 10px;
+	border-bottom: 1px solid gray;
+	
+}
+.about-text {
+	float: left;
+	width: 60%;
+	margin: 0 5%;
+}
+.about-dentist {
+	clear: both;
+	width: 100%;
+	padding: 20px;
+}
+
+
+
+
 /* Footer */
 .main-footer {
 	clear: both;
